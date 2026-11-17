@@ -1,0 +1,66 @@
+:root {
+  font-family: 'DM Sans', 'Segoe UI', sans-serif;
+  color: #242a24;
+  background: #f7f7f2;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+
+  --ink: #242a24;
+  --muted: #898c80;
+  --line: #e8e8df;
+  --paper: #fffefa;
+  --green: #355b45;
+  --green-dark: #294936;
+  --soft-green: #eaf0e8;
+  --serif: 'Playfair Display', Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: #f7f7f2;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #9db59e;
+  outline-offset: 3px;
+}
+
+::selection {
+  color: #fff;
+  background: #52775d;
+}
