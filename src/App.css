@@ -147,17 +147,20 @@
 }
 
 .avatar-link {
-  display: grid;
+  display: block;
   width: 32px;
   height: 32px;
-  place-items: center;
+  overflow: hidden;
   border: 1px solid #dfe5dc;
   border-radius: 50%;
-  color: #44634a;
   background: #e9eee5;
-  font-size: 10px;
-  font-weight: 700;
-  text-decoration: none;
+}
+
+.avatar-link img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .page-content {
@@ -812,26 +815,16 @@ p {
   padding: 23px;
 }
 
-.profile-card-top {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin-bottom: 17px;
-}
-
 .profile-avatar {
-  position: relative;
-  display: grid;
-  width: 60px;
-  height: 60px;
-  place-items: center;
+  display: block;
+  width: 72px;
+  height: 72px;
+  margin-bottom: 17px;
   border: 3px solid #fff;
   border-radius: 50%;
-  color: #f8f6ea;
-  background: #49674d;
+  background: #e9eee5;
   box-shadow: 0 0 0 1px #e1e6dc;
-  font-family: var(--serif);
-  font-size: 19px;
+  object-fit: cover;
 }
 
 .profile-card > h2 {
@@ -841,6 +834,16 @@ p {
   font-size: 22px;
   font-weight: 600;
   line-height: 1.25;
+}
+
+.profile-github {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 600;
+  text-underline-offset: 3px;
 }
 
 .profile-divider {

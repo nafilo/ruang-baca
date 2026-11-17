@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import {
   ArrowRight,
+  ArrowUpRight,
   BookOpen,
   BookPlus,
   Check,
@@ -18,6 +19,7 @@ import {
   WifiOff,
   X,
 } from 'lucide-react'
+import creatorAvatar from './assets/nafilo-avatar.jpg'
 import { databaseConfigured, deleteBook, fetchBooks, saveBook } from './services/collectionService'
 import './App.css'
 
@@ -260,7 +262,7 @@ function App() {
               {connectionLabel}
             </span>
             <a className="avatar-link" href="#profile" aria-label="Buka profil Arkan">
-              AN
+              <img src={creatorAvatar} alt="" width="32" height="32" />
             </a>
           </div>
         </header>
@@ -498,15 +500,16 @@ function ProfilePage({ bookCount, onInstall, canInstall, appInstalled, installMe
   return (
     <section className="profile-page">
       <div className="page-title-row">
-        <h1>Profil</h1>
+        <h1>Profil Pembuat</h1>
       </div>
 
       <div className="profile-layout">
         <article className="profile-card">
-          <div className="profile-card-top">
-            <div className="profile-avatar" aria-hidden="true">AN</div>
-          </div>
+          <img className="profile-avatar" src={creatorAvatar} alt="" width="72" height="72" />
           <h2>Arkan Nafi Nurcahyo</h2>
+          <a className="profile-github" href="https://github.com/nafilo" target="_blank" rel="noreferrer">
+            GitHub · @nafilo <ArrowUpRight size={14} aria-hidden="true" />
+          </a>
           <div className="profile-divider" />
           <dl className="profile-details">
             <div><dt>NIM</dt><dd>21120124140160</dd></div>
